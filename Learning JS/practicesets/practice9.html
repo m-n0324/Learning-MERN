@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>array </title>
+</head>
+<body>
+  <script>
+   /* let numbers = [1,4,3,7,
+    5,6,7,2];
+    console.log(numbers);
+    console.log(numbers.length);
+    console.log(numbers[0]);
+    let doosra = [1 , true, null ,'mansi'];
+    console.log(doosra[3]);
+    console.log(typeof doosra);
+    console.log(Array.isArray(doosra));
+    let obj = {lkj: 98};
+    console.log(Array.isArray(obj));*/
+    let arr = [3,5,7,6]
+
+
+    //arr.splice(1,2);
+    console.log(arr.toString());
+    console.log('sorted' + arr.sort());
+    console.log(arr.valueOf()); //same array print hoga but es baar ye dusra object hai
+    let arr2 = arr; //new copy nhi banana hai sirf refrence copy hua hai
+   arr2[0] = 99;
+   console.log(arr);
+   let [a,b,c,d] = arr;
+   console.log(a + " "+b +" "+c +" "+d)// naam nhi dege sequence se destructuring hogi
+
+    
+   /* arr.push(6);
+    console.log('popped'+ arr.pop());
+    //console.log('shifted'+ arr.shift());
+    arr.unshift(1); // add element first position
+    console.log(arr);
+    arr.shift();// delete element first position*/
+  
+    
+    
+  </script>
+  
+</body>
+</html>

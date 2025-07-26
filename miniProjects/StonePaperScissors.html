@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>stonePaperScissors</title>
+  <style>
+    .btn {
+      background-color: rgb(14, 188, 5);
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin: 5px;
+      color: white;
+      font-size: 20px;
+
+    }
+
+    .btn:hover {
+      background-color: rgb(8, 154, 3);
+    }
+
+    .btn:active {
+      background-color: rgb(191, 19, 19);
+     } 
+     .reset-button{
+      background-color: rgb(250, 71, 26);
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin: 5px;
+      color: white;
+      font-size: 20px;
+
+     }
+ 
+  </style>
+</head>
+
+<body>
+  <h1> Rock Paper Scissors Game</h1>
+  <h4 id="score" style="font-family: cursive">No Games Played Yet</h4>
+  <h5> Click on one of the following to play game: </h5>
+  <button class="btn" onclick="rockClicked()">👊Rock</button>
+  <button class="btn" onclick="paperClicked()"> 🖐 Paper</button>
+  <button class="btn" onclick="ScissorClicked()"> ✌️Scissors</button>
+
+  <button class="reset-button" onclick=" resetScore()"> Reset Score</button>
+  <h3 id="result"></h3>
+
+  <script>
+    let score = {
+      computer:0,
+      user:0,
+      tie:0,
+      updateScore: function() {
+        this.saveScore();
+        document.querySelector('#score').innerHTML =` Score: Computer Won :${this.computer} , User Won :${this.user} ,Tie :${this.tie}`;
+      } ,
+       saveScore: function() {
+        let scoreStr = JSON.stringify(this);
+        localStorage.setItem('score', scoreStr);
+        console.log(`score saved: ${scoreStr}`);
+       }
+    };
+    function initialize() {
+      let scoreStr =localStorage.getItem('score');
+      if(scoreStr){
+        console.log(`previous score found: ${scoreStr}`);
+        let scoreVal = JSON.parse(scoreStr);
+        score.computer=scoreVal.computer;
+        score.user=scoreVal.user;
+        score.tie=scoreVal.tie;
+        score.updateScore();
+
+      }
+
+    };
+    function resetScore(){
+      console.log('reseting score');
+      score.computer= 0;
+        score.user=0;
+        score.tie=0;
+        score.saveScore();
+        score.updateScore();
+
+    }
+    
+
+
+
+    function randomChoiceGenerator() {
+      randomtext = Math.floor(Math.random() * 3 + 1);
+      return randomtext;
+    }
+
+    function computerChoiceGenerator() {
+      let randomtext = randomChoiceGenerator();
+      if (randomtext === 1) {
+        computerChoice = `👊Rock`;
+      } else if (randomtext === 2) {
+        computerChoice = `🖐 Paper`;
+      } else {
+        computerChoice = `✌️Scissors`;
+      }
+      return computerChoice;
+      
+    }
+
+    function updateResult(userChoice,computerChoice,result){
+      
+      document.querySelector('#result').innerHTML =
+      `You Choose ${userChoice}.<br>
+      Computer Choose ${computerChoice} <br>
+      And the result is ${result}`; 
+    }
+
+    function getResult( userChoice, computerChoice){
+      let result;
+      if(userChoice === computerChoice){
+        result =`Tie`;
+        score.tie++;
+        score.updateScore();
+      }else if( (userChoice ===`👊Rock` && computerChoice ===`🖐 Paper`)||
+                (userChoice === `🖐 Paper`  && computerChoice ===`✌️Scissors`)||
+                (userChoice === `✌️Scissors`  && computerChoice ===`👊Rock`  ) ){
+        result =`Computer Won`;
+        score.computer++;
+        score.updateScore();
+      }else{
+       result = `User Won`;
+       score.user++
+       score.updateScore();
+      }
+      return result;
+    }
+
+    function rockClicked() { 
+      const userChoice = `👊Rock`;
+      let computerChoice = computerChoiceGenerator();
+      let result = getResult( userChoice, computerChoice);
+      updateResult(userChoice,computerChoice,result);
+    }
+
+    function paperClicked() {  
+      const userChoice = `🖐 Paper`;
+      let computerChoice = computerChoiceGenerator();
+      let result = getResult( userChoice, computerChoice);
+      updateResult(userChoice,computerChoice,result);
+    }
+
+    function ScissorClicked() {
+      const userChoice = `✌️Scissors`;
+      let computerChoice = computerChoiceGenerator();
+      let result = getResult( userChoice, computerChoice);
+      updateResult(userChoice,computerChoice,result);
+    }
+    initialize();
+
+  </script>
+</body>
+
+</html>

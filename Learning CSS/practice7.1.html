@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: pink;
+            position: relative;
+            top: 50px;
+            left: 50px;
+            animation: mansi 2s ease-in-out 1s infinite;
+           
+        }
+        @keyframes mansi{
+            0%{left: 10px; top:0px}
+            50%{left: 150px; top:100px}
+            100%{left: 300px; top: 0px;}
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="box"> animation</div>
+</body>
+</html>

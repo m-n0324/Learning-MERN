@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>object</title>
+</head>
+<body>
+  <script>
+    /*let product = {
+      company : 'mango',
+      price : 861,
+      'item-name' : 't-shirt'
+      
+
+    };*/
+     // console.log(product);
+   // console.log(product.company);
+
+    //product.company = 'banana' ;
+    //console.log(product);
+    //let productName = 'item-name';
+   // console.log(product.productName);
+    //console.log(product[productName]);
+
+  //delete product.company;
+  //console.log( product);
+
+  /*let product = {
+      company : 'mango',
+      price: 861,
+      item_name : 't-shirt',
+      displayPrice: function() {
+        //console.log(`price of the product is ${product.price}`)
+        console.log(`price of the product is ${this.price}`)
+
+      }
+
+    };
+    //console.log( product.price);
+    //product.price;
+     product.displayPrice();*/
+     //autoboxing
+
+     /*console.log('this is mansi'.toUpperCase ());
+     console.log('this is mansi'.replace('mansi', 'nigam') );*/
+
+     /*let a = 5;
+     let b = a;
+     console.log(` a=${a}, b=${b}, `);
+     a = 8;
+     console.log(` a=${a}, b=${b}, `);
+
+     //refrence object
+    let x = {num: 5};
+    let y = x;
+    console.log(` x=${x.num}, y=${y.num} `);
+    x.num = 8;
+    console.log(` x=${x.num}, y=${y.num} `);
+
+    let p ={pop:'ghjhgj'};
+    let q ={pop:'ghjhgj'};
+    console.log(p == q);
+    console.log(p === q);*/
+    //deconstruction
+    //let {company} = product;
+    //console.log(company);
+    //let {company,price} = product;
+    //console.log(company);
+    //console.log(price);
+
+    
+    /*let copyProduct = product;
+    console.log(product);
+
+    copyProduct.size = 'M';
+    console.log(product);
+
+    copyProduct.fit = 'regular';
+    console.log(product);*/
+    let product = {
+      name:'jeans',
+      size:'s',
+      fit:'slim fit',
+      'delivery-time': 'sameday'
+
+    };
+    function isIdenticalProduct(product1,product2){
+      if(typeof product1 !== 'object'|| typeof product2 !== 'object'){
+        console.warn('parameter passed was not an object ');
+        return false;
+      }
+      if (product1 == product2){
+        return true;
+
+      }
+      if(product1.name === product2.name &&
+      product1.size === product2.size &&
+      product1.fit === product2.fit ){
+        return true;
+      }else{
+        return false;
+      }
+          
+
+    }
+    let product2 = {
+      name:'jeans',
+      size:'M',
+      fit:'slim fit',
+      'delivery-time': 'sameday'
+
+    };
+    let product3= {
+      name:'jeans',
+      size:'M',
+      fit:'slim fit',
+      'delivery-time': 'sameday'
+
+    };
+    console.log(isIdenticalProduct(product, ''));
+    console.log(isIdenticalProduct(product, product));
+    console.log(isIdenticalProduct(product3, product2));
+    console.log(isIdenticalProduct(product2, product3));
+
+    
+    
+
+
+
+
+  </script>
+  
+</body>
+</html>

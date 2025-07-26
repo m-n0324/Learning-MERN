@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>loop</title>
+</head>
+<body>
+  <h6> for , while, do while loop</h6>
+  <script>
+    /*let num =1;//initialisation
+    while (num <= 10){//condition
+      console.log(num);
+      num = num+1;//updating
+    }*/
+   /*let x = 0;// non-standard condition where we prefer while loops
+   while(x < 1 ){
+    console.log(x)
+    x = Math.random()*2;
+
+   }
+   console.log('final value of xis :' + x);*/
+
+   // do while loop at least ek baar to execute to hoga hi
+   /*let num = 0; // initialisation
+   do{
+    console.log(num);
+    num++; // updation
+   }while(num>5); //condition*/
+
+   // for loop
+   /*for(let num=1; num <= 10; num++) {
+    console.log(num);
+   }*/
+   // incase of arrays we can use for loop for printing the each element of the array
+   /*let nums = [4,56,8,3,-87,9,78];
+   for(let index = 0; index <= 6;index++){
+    console.log(nums[index]);
+   }*/
+   // same work we can do if we use .length incase the actual length of the array is known
+   /*let nums = [4,56,8,3,-87,9,78];
+   for(let index = 0; index < nums.length;index++){
+    console.log(nums[index]);
+   }*/
+   // further instead of usinf whole index woed inshort we sue i 
+   /*let nums = [4,56,8,3,-87,9,78];
+   for(let i = 0; i < nums.length;i++){
+    console.log(nums[i]);
+   }*/
+
+   //accumulator pattern in this particular topic we will start by finding the sum of all the numbers present in array second is creating a modified copy of an array
+  /*let nums = [1,2,3,4,5,6,7,8,9,10];
+  let sum = 0;
+  for(let i= 0; i < nums.length; i++){
+    sum = sum + nums[i];
+    //console.log(sum); if we print here the value of sum then at each step it will sum the value again print till er get the final sum value of 120
+  }
+  //console.log(sum); // in this case we will get the noraml answer 120
+  console.log(`the sum of the array is ${sum}`);
+  let squares = [];
+  for (let i=0; i <
+   nums.length; i++){
+    //squares[i] = nums[i] * nums[i];
+    squares.push (nums[i] * nums[i]);
+
+  }
+   console.log(squares);// we have creates a modified copy of the  array nums*/
+
+   // break and continue
+   /*for(let i=0; i<=10;i++){
+    console.log(i);
+    if(i === 3){
+      break; // this will break the loop at i===3 and further numbers will not be printed 
+    }
+   }*/
+   // the next is that we will search the element at the specific index
+   /*let arr = [1,3,5,6,7,8,9];
+   for(let i=0;i < arr.length; i++){
+    if(arr[i] === 8){
+      console.log(`number found at index ${i}`);
+      break
+    }
+   }*/
+   //  a simple program to print even and odd numbers upto specific value
+  /* for(let i =1 ;i <= 25;i++){ // for odd numbers
+    if(i%2 == 1){console.log(i);  
+    }
+    } 
+    console.log(i);*/
+
+   // using continue
+   /*for(let i =1 ;i <= 25;i++){ // for odd numbers
+    if(i%2 == 0){
+      continue;
+    } console.log(i);
+
+   }*/
+   for (let i = 0; i < 10; i++){
+    if (i === 3){ // this will skip the value 3
+      continue;
+    }
+    console.log(i);
+   }
+   
+
+   
+
+
+
+
+
+
+
+
+
+  </script>
+  
+</body>
+</html>
