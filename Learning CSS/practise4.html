@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title> box model </title>
+   <style> 
+   *{margin: 0; padding: 0;}
+    #button1{
+        height: 50px; width: 50px;
+        background-color: aqua;
+        margin: 20px 10px 15px 20px;
+        padding: 5px 10px 15px 20px;
+        border: 10px solid black;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    #button2{height: 50px; width: 50px;
+        background-color: plum;
+        margin: 20px 10px 15px 20px;
+        padding: 5px 10px 15px 20px;
+        border: 10px dotted black;
+        border-radius: 10px;
+        box-sizing: content-box;
+
+    }
+    #button3{height: 200px; width: 200px;
+        background-color: plum;
+        margin: 100px;
+        padding: 10px 15px 10px 15px;
+        border: 10px dotted red;
+        border-radius: 80px;
+        box-sizing: content-box;
+        text-align: center;
+
+
+    }
+   </style>
+
+</head>
+<body>
+    <div id="button1" > click me</div>
+    <div id="button2"> second</div><hr>
+    <div id="button3"> third </div>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+  <link rel="stylesheet" href="cricket.css">
+  <link rel="stylesheet" href="cricket.js">
+ <style>
+  body{
+    text-align: center;
+  }
+ </style>
+</head>
+<body>
+  <h1> CRICKET </h1>
+  <h1> BAT BALL STUMP GAME</h1>
+  <h2> Lets play </h2>
+  <button onclick="  computerChoice = generateComputerChoice();             
+  // const userChoiceMsg = 'you have chosen bat';
+          
+  
+  
+  
+  "> BAT </button>
+  
+  <button onclick="  computerChoice = generateComputerChoice();     
+      
+                   let resultmsg;
+                  if(computerChoice === 'BALL'){
+                       resultmsg = 'it is a tie' ;
+                  } else if (computerChoice === 'BAT'){
+                       resultmsg = 'Computer Won';
+                  } else if (computerChoice === 'STUMP'){
+                       resultmsg = 'User Won';
+                  }
+                  alert( `you have chosen ball. Computer choice is ${ computerChoice} and  ${resultmsg}`);"> BALL</button>
+
+  <button onclick="  computerChoice = generateComputerChoice();     
+                  let resultMSg;
+                  if(computerChoice === 'BALL'){
+                       resultMSg = 'User Won' ;
+                  } else if (computerChoice === 'BAT'){
+                        resultMSg = 'Computer Won';
+                  } else if (computerChoice === 'STUMP'){
+                        resultMSg = 'it is a tie';
+                  } 
+                    alert( `you have chosen stump . Computer choice is ${ computerChoice} and  ${resultMSg}`);"> STUMP</button>
+
+
+ 
+  
+
+    <script> 
+    
+           function generateComputerChoice(){
+
+           let randomNumber = Math.random()*3;
+           if( randomNumber > 0 && randomNumber <= 1){
+               return 'BAT';
+                  //console.log('computer choice is BAT');
+           } else if( randomNumber > 1 && randomNumber <= 2){
+                 return 'BALL';
+                  // console.log('computer choice is BALL');
+           } else{
+              return'STUMP'
+                 //console.log('computer choice is STUMP');
+            }
+           
+            const computerChoiceMsg = `computer choice is ${computerChoice}`;
+
+     }
+     // parameters
+     function getResult( userMove, computerMove){
+      
+            let resultMsg;
+            if(omputerMove === userMove){
+              resultMsg = 'it is a tie';
+            } else if (computerChoice === 'BAT'){
+              resultMsg = 'it is a tie';
+            } else if (computerChoice === 'STUMP'){
+              resultMsg = 'Computer Won';
+            }
+            alert( `you have chosen bat. Computer choice is ${ computerChoice} and  ${resultMsg}`);
+
+
+     }
+    </script>
+
+</body>
+</html>

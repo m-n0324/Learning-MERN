@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+</head>
+<body>
+  <!-- Desktop Navigation -->
+  <nav class="desktop-nav">
+    <div class="logo">MANSI NIGAM</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hamburger Navigation -->
+  <nav id="hamburger-nav">
+    <div class="logo">MANSI NIGAM</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#skills" onclick="toggleMenu()">Skills</a>
+        <a href="#projects" onclick="toggleMenu()">Projects</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <section id="profile" class="reveal">
+    <div class="section-pic-container">
+      <img src="istockphoto-836681032-612x612.jpg" alt="Profile Picture">
+    </div>
+    <div class="section-text">
+      <p class="section-text-p1">Hello, I'm</p>
+      <h1 class="title">Mansi Nigam</h1>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="reveal">
+    <div class="section-container">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          Hello, I'm <strong>Mansi Nigam</strong>, a passionate second-year IT student at SATI Vidisha. I'm deeply interested in technology, coding, and solving real-world problems through innovative solutions. Currently, I'm honing my skills in various programming languages, software development, and data structures.
+        </p>
+        <p>
+          During my time at SATI Vidisha, I've worked on hands-on projects applying theoretical knowledge to practical situations. I aim to contribute to the tech industry and collaborate with like-minded innovators.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="img111.jpg" alt="Mansi Nigam">
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="reveal">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <i class='bx bxl-html5'></i>
+        <p>HTML</p>
+        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+      </div>
+      <div class="skill">
+        <i class='bx bxl-css3'></i>
+        <p>CSS</p>
+        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+      </div>
+      <div class="skill">
+        <i class='bx bxl-javascript'></i>
+        <p>JavaScript</p>
+        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+      </div>
+      <div class="skill">
+        <i class='bx bxl-python'></i>
+        <p>Python</p>
+        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+      </div>
+      <div class="skill">
+        <i class='bx bxl-java'></i>
+        <p>Java</p>
+        <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+      </div>
+      <div class="skill">
+        <i class='bx bxs-data'></i>
+        <p>Data Structures & Algorithms</p>
+        <div class="progress-bar"><div class="progress" style="width: 65%;"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="reveal">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <i class='bx bx-code-alt project-icon'></i>
+        <h3>Portfolio Website</h3>
+        <p>A responsive portfolio showcasing my skills, projects, and contact details. Built with HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <i class='bx bx-calculator project-icon'></i>
+        <h3>Calculator</h3>
+        <p>A functional calculator for basic operations, built with HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="reveal">
+    <h2>Contact Me</h2>
+    <p>Let's connect! Reach out or explore my work on these platforms:</p>
+    <div class="social-links">
+     
+      <a href="www.linkedin.com/in/mansi-nigam-133135237" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+      <a href="https://www.instagram.com/yourusername" target="_blank"><i class='bx bxl-instagram'></i></a>
+      
+    </div>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>

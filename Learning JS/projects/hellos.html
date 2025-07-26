@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dual Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <!-- Calculator 1 -->
+    <div id="big-box1">
+      <div class="page-color">
+        <h1>CALCULATOR</h1><br>
+        <h2>USING</h2>
+        <img src="html5-css3-js-icon-set-web-development-logo-icon-set-of-html-css-and-javascript-programming-symbol-free-vector.jpg"
+             style="height: 90px;">
+      </div>
+      <div id="calculator1">
+        <input type="text" placeholder="0" id="display1" readonly>
+        <div class="button-container1">
+          <button class="button-symbol" onclick="clearDisplay1()">AC</button>
+          <button class="button-symbol" onclick="appendToDisplay1('%')">%</button>
+          <button class="button-symbol" onclick="deleteLast1()">⌫</button>
+          <button class="button-operation" onclick="appendToDisplay1('/')">÷</button>
+          <button class="button" onclick="appendToDisplay1('7')">7</button>
+          <button class="button" onclick="appendToDisplay1('8')">8</button>
+          <button class="button" onclick="appendToDisplay1('9')">9</button>
+          <button class="button-operation" onclick="appendToDisplay1('*')">×</button>
+          <button class="button" onclick="appendToDisplay1('4')">4</button>
+          <button class="button" onclick="appendToDisplay1('5')">5</button>
+          <button class="button" onclick="appendToDisplay1('6')">6</button>
+          <button class="button-operation" onclick="appendToDisplay1('-')">−</button>
+          <button class="button" onclick="appendToDisplay1('1')">1</button>
+          <button class="button" onclick="appendToDisplay1('2')">2</button>
+          <button class="button" onclick="appendToDisplay1('3')">3</button>
+          <button class="button-operation" onclick="appendToDisplay1('+')">+</button>
+          <button class="button" onclick="appendToDisplay1('00')">00</button>
+          <button class="button" onclick="appendToDisplay1('0')">0</button>
+          <button class="button" onclick="appendToDisplay1('.')">.</button>
+          <button class="button-operation" onclick="calculateResult1()">=</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calculator 2 -->
+    <div id="big-box">
+      <div id="calculator2">
+        <input type="text" placeholder="0" id="display2" readonly>
+        <div class="button-container">
+          <button class="button-symbol" onclick="clearDisplay2()">AC</button>
+          <button class="button-symbol" onclick="appendToDisplay2('%')">%</button>
+          <button class="button-symbol" onclick="deleteLast2()">⌫</button>
+          <button class="button-operation" onclick="appendToDisplay2('/')">÷</button>
+          <button class="button-scientific" onclick="appendToDisplay2('Math.sin(')">sin</button>
+          <button class="button" onclick="appendToDisplay2('7')">7</button>
+          <button class="button" onclick="appendToDisplay2('8')">8</button>
+          <button class="button" onclick="appendToDisplay2('9')">9</button>
+          <button class="button-operation" onclick="appendToDisplay2('*')">×</button>
+          <button class="button-scientific" onclick="appendToDisplay2('Math.cos(')">cos</button>
+          <button class="button" onclick="appendToDisplay2('4')">4</button>
+          <button class="button" onclick="appendToDisplay2('5')">5</button>
+          <button class="button" onclick="appendToDisplay2('6')">6</button>
+          <button class="button-operation" onclick="appendToDisplay2('-')">−</button>
+          <button class="button-scientific" onclick="appendToDisplay2('Math.tan(')">tan</button>
+          <button class="button" onclick="appendToDisplay2('1')">1</button>
+          <button class="button" onclick="appendToDisplay2('2')">2</button>
+          <button class="button" onclick="appendToDisplay2('3')">3</button>
+          <button class="button-operation" onclick="appendToDisplay2('+')">+</button>
+          <button class="button-scientific" onclick="appendToDisplay2('Math.log10(')">log</button>
+          <button class="button" onclick="appendToDisplay2('00')">00</button>
+          <button class="button" onclick="appendToDisplay2('0')">0</button>
+          <button class="button" onclick="appendToDisplay2('.')">.</button>
+          <button class="button-operation" onclick="calculateResult2()">=</button>
+          <button class="button-scientific" onclick="appendToDisplay2('Math.sqrt(')">√</button>
+          <button class="button-scientific" onclick="appendToDisplay2('Math.PI')">π</button>
+          <button class="button-scientific" onclick="appendToDisplay2('Math.E')">e</button>
+          <button class="button-scientific" onclick="appendToDisplay2('Math.pow(')">xʸ</button>
+          <button class="button-scientific" onclick="appendToDisplay2('Math.exp(')">exp</button>
+          <button class="button-scientific" onclick="appendToDisplay2('Math.log(')">ln</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Calculator 1 Logic
+    let currentDisplay1 = '';
+
+    function appendToDisplay1(value) {
+      currentDisplay1 += value;
+      document.getElementById('display1').value = currentDisplay1;
+    }
+
+    function clearDisplay1() {
+      currentDisplay1 = '';
+      document.getElementById('display1').value = currentDisplay1;
+    }
+
+    function deleteLast1() {
+      currentDisplay1 = currentDisplay1.slice(0, -1);
+      document.getElementById('display1').value = currentDisplay1;
+    }
+
+    function calculateResult1() {
+      try {
+        currentDisplay1 = eval(currentDisplay1).toString();
+        document.getElementById('display1').value = currentDisplay1;
+      } catch (e) {
+        document.getElementById('display1').value = 'Error';
+      }
+    }
+
+    // Calculator 2 Logic
+    let currentDisplay2 = '';
+
+    function appendToDisplay2(value) {
+      currentDisplay2 += value;
+      document.getElementById('display2').value = currentDisplay2;
+    }
+
+    function clearDisplay2() {
+      currentDisplay2 = '';
+      document.getElementById('display2').value = currentDisplay2;
+    }
+
+    function deleteLast2() {
+      currentDisplay2 = currentDisplay2.slice(0, -1);
+      document.getElementById('display2').value = currentDisplay2;
+    }
+
+    function calculateResult2() {
+      try {
+        currentDisplay2 = eval(currentDisplay2).toString();
+        document.getElementById('display2').value = currentDisplay2;
+      } catch (e) {
+        document.getElementById('display2').value = 'Error';
+      }
+    }
+  </script>
+</body>
+</html>
