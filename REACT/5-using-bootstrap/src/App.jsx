@@ -4,18 +4,17 @@ import Addtodo from "./todo-list/addtodo";
 
 import TodoItems from "./todo-list/todoitems";
 import './todo-list/button';
+import React from "react";
 function App() {
   
-  return <>
-  
- <center>  <Heading />
+  return(
+    <React.Fragment>
+      <center><Heading />
             <Addtodo /> 
             <TodoItems />
- 
  </center>
- 
-  </>
-  
+    </React.Fragment>
+  ); 
    
 }
 
