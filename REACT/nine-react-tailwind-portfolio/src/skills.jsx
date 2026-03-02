@@ -6,7 +6,7 @@ const Skills = ()=>{
   const skillTitle = [ "Java","DSA","HTML","CSS","JavaScript","Bootstrap","Tailwindcss","Python","C","React","Express","MongoDB","NodeJs","SQL","Git","AWL","Docker"]
   return <Section icon={<Code/>} sectionTitle ="Skills" > 
   <div className='flex flex-wrap gap-2'>
-    {skillTitle.map(title => <Pill  title={title}/>)}
+    {skillTitle.map(title => <Pill  key={title} title={title}/>)}
   </div>
   </Section>
 
