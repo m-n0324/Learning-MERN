@@ -6,9 +6,11 @@ const List = ({ list }) => {
   // }
 
   return (
-    <>
+    <>  
+    
+  
       {!list || list.length === 0 ? (
-        <h2 className="text-red-800"> no student is passed to display</h2>
+        <h2 className="text-red-800"> no student is passed to display Conditional rendering</h2>
       ) : (
         <h2 className="text-red-800"> here is the list of students</h2>
       )}
